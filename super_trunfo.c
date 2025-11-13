@@ -12,6 +12,7 @@ int main() {
     double pibcapita1, pibcapita2;
     int populacao_1, populacao_2;
     int pontos_turisticos_1, pontos_turisticos_2;
+    int Resultado_Area, Resultado_Pib, Resultado_Densidade, Resultado_PibCapita, Resultado_Populacao, Resultado_Turistico;
 
     printf("==========================================\n");
     printf("         SUPER TRUNFO - CIDADES \n");
@@ -80,6 +81,14 @@ int main() {
     pibcapita2 = (pib_2 * 1000000000) / populacao_2;
     densidade2 = populacao_2 / area_2;
 
+    //Comparação Cartas Super Trunfo
+    Resultado_Area = area_1 > area_2;
+    Resultado_Densidade = densidade1 > densidade2;
+    Resultado_Pib = pib_1 > pib_2;
+    Resultado_PibCapita = pibcapita1 > pibcapita2;
+    Resultado_Populacao = populacao_1 > populacao_2;
+    Resultado_Turistico = pontos_turisticos_1 > pontos_turisticos_2;
+
     printf("\n");
 
     //Aviso de Fim de Cadastro
@@ -118,6 +127,17 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pibcapita2);
 
+    printf("\n");
+    printf("\n");
+
+
+    //comparação de cartas
+    printf("Comparação de Cartas: \n");
+    printf("A população da carta 1 é maior que a carta 2: %d\n", Resultado_Populacao);
+    printf("A Área da carta 1 é maior que a carta 2: %d\n", Resultado_Area);
+    printf("Os Pontos Turísticos da carta 1 é maior que a carta 2: %d\n", Resultado_Turistico);
+    printf("A Densidade Populacional da carta 1 é maior que a carta 2: %d\n", Resultado_Densidade);
+    printf("O Pib per Capita da carta 1 é maior que a carta 2: %d\n", Resultado_PibCapita);
 
     return 0;
 }
